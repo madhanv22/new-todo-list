@@ -5,7 +5,7 @@ function App() {
 
   return (
     <div>
-      <Header />
+      <Header title='ToDo List'/>
       <Content />
     </div>
   )
