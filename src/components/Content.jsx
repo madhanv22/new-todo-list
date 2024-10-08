@@ -43,7 +43,7 @@ const Content = () => {
       <div className='input-container'>
         <input 
           className='input-search'
-          type="text" 
+          type='text' 
           placeholder='Enter The List'
           required
           value={newItem}
@@ -62,7 +62,7 @@ const Content = () => {
               checked = {item.checked}
               onClick={() => handleCheck(item.id)}
             />
-            <span style={item.checked ? { textDecoration: 'line-through' } : {}}>{item.items}</span>
+            <span className='items-list' style={item.checked ? { textDecoration: 'line-through' } : {}}>{item.items}</span>
 
             <button className='delete-button'
               onClick={() => handleDelete(item.id)}
