@@ -56,7 +56,7 @@ const Content = () => {
   };
 
   return (
-    <main>
+    <main className='bg-gradient-body flex-container'>
       <div className='input-container'>
         <input 
           className='input-search'
