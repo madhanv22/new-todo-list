@@ -10,8 +10,7 @@
 
 body {
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
-  background-color: #f9fafb; 
-  color: #2d3748;
+  background-color: black; 
 }
 
 .input-container {
@@ -19,22 +18,17 @@ body {
 }
 
 .add-button {
-  @apply bg-gradient-to-r from-green-700 to-green-500 px-3 py-3 text-white rounded-full
+  @apply bg-gradient-to-r from-green-700 to-green-500 px-3 py-4 text-white rounded-full
     hover:bg-green-600 font-bold shadow-lg transition-all duration-200 ease-in-out
 }
 
 .input-search {
-  @apply p-3 border-2 border-gray-400 mx-3 rounded-lg shadow-sm 
+  @apply p-3 border-2 border-gray-400 mx-3 rounded-lg shadow-sm w-full max-w-md
    focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200
 }
 
-.list-container {
-  @apply flex flex-col m-8 items-center space-y-4;
-}
-
 .list-container li {
-  @apply flex items-center w-full max-w-md py-4 px-4 bg-white rounded-lg shadow-md 
-    hover:shadow-lg transition-all duration-200 ease-in-out justify-between;
+  @apply flex items-center w-full max-w-md m-2 py-4 px-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 ease-in-out justify-between;
 }
 
 .input-checkbox {
@@ -52,14 +46,14 @@ body {
 }
 
 .empty {
-  @apply text-2xl py-8 font-semibold text-orange-600 italic;
+  @apply text-2xl py-8 font-semibold text-transparent bg-clip-text 
+    bg-gradient-to-r from-blue-500 to-purple-500 italic;
 }
 
 .header {
-  @apply text-center text-4xl font-extrabold text-transparent bg-clip-text
-    bg-gradient-to-r from-green-700 to-blue-700 shadow-lg p-6 rounded-full 
-    w-full max-w-3xl mx-auto mt-6 mb-4 
-    bg-gradient-to-b from-purple-500 to-pink-500; 
+  @apply text-center text-4xl font-extrabold text-white 
+  bg-gradient-to-r from-purple-600 to-pink-600 shadow-xl p-6 rounded-full 
+  w-full max-w-3xl mx-auto mt-6 mb-4 bg-opacity-80;
 }
 
 .radio-container {
@@ -71,20 +65,26 @@ body {
 }
 
 .bg-gradient-body {
-  @apply bg-gradient-to-b from-gray-100 via-gray-200 to-gray-100;
+  @apply bg-gradient-to-b from-gray-800 via-gray-600 to-gray-800;
 }
 
 .flex-container {
   @apply flex flex-col items-center
 }
 
-
-@layer components {
-  .input-checkbox:checked {
-    @apply ring-2 ring-green-500; 
-  }
-
-  .radio-button:checked {
-    @apply ring-2 ring-green-500; 
-  }
+.how-to-use {
+  @apply mt-6 p-4 rounded-lg bg-white bg-opacity-80 shadow-xl;
 }
+
+.how-to-use h2 {
+  @apply text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 mb-2;
+}
+
+.how-to-use ol {
+  @apply list-decimal list-inside text-gray-700 bg-gradient-to-r from-blue-300 to-blue-500 rounded-lg p-4;
+}
+
+.how-to-use li {
+  @apply mb-2 bg-gradient-to-r from-purple-200 to-pink-200 p-2 rounded-md shadow-sm;
+}
+
