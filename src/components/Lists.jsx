@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { UserContext } from './Content'
 
-const Lists = ({handleCheck, handleDelete, item}) => {
+const Lists = ({item}) => {
+  const { handleCheck, handleDelete} = useContext(UserContext)
+
   return (
     <div>
-      <li key={item.id}>
+      <li>
         <input 
           className='input-checkbox'
           type="checkbox" 

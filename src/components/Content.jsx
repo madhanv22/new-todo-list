@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, createContext } from 'react';
 import axios from 'axios';
-import Lists from './Lists';
 import Input from './Input';
 import Guide from './Guide';
+import Licontainer from './Licontainer';
+
+export const UserContext = createContext();
 
 const Content = () => {
   const [items, setItems] = useState([]);
@@ -60,24 +62,20 @@ const Content = () => {
 
   return (
     <main className='bg-gradient-body flex-container'>
+      {/* Input component */}
       <Input 
         handleAdd = {handleAdd}
         newItem = {newItem}
         setNewItem = {setNewItem}
       />
-      <ul className='list-container'>
-        {items.length > 0 ? (
-          items.map(item => (
-            <Lists
-              handleCheck = {handleCheck}
-              handleDelete = {handleDelete}
-              item={item}
-            />
-          ))
-        ) : (
-          <p className='empty'>Your List Is Empty</p>
-        )}
-      </ul>
+      {/* Usecontext */}
+      <UserContext.Provider 
+      value={ {items, handleCheck, handleDelete}} 
+      >
+      {/* List container component */}
+      <Licontainer />
+      </UserContext.Provider>
+      {/* Guidence component */}
       <Guide />
     </main>
   );
