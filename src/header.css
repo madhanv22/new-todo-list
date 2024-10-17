@@ -1,0 +1,5 @@
+.header {
+  @apply text-center text-5xl font-bold text-white 
+  bg-gradient-to-r from-purple-500 to-pink-500 shadow-2xl p-8 rounded-lg 
+  w-full mx-auto mt-8 mb-6 bg-opacity-90;
+}

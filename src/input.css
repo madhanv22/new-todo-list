@@ -1,0 +1,9 @@
+
+.input-container {
+  @apply flex items-center justify-center mt-16;
+}
+
+.input-search {
+  @apply p-3 border-2 border-gray-400 mx-3 rounded-lg shadow-sm w-full max-w-md
+   focus:ring-2 focus:ring-checked focus:border-transparent transition-all duration-200;
+}

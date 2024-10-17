@@ -1,0 +1,41 @@
+
+.list-container li {
+  @apply flex items-center w-full max-w-md m-2 py-4 px-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg shadow-md hover:shadow-lg 
+    transition-all duration-200 ease-in-out justify-between;
+}
+
+.input-checkbox {
+  @apply h-6 w-6 border-2 rounded-lg cursor-pointer transition-all duration-300 ease-in-out
+    focus:ring-2 focus:ring-checked;
+}
+
+.input-checkbox:checked {
+  @apply bg-checked shadow-checked scale-checked; 
+}
+
+.input-checkbox:not(:checked) {
+  @apply bg-unchecked shadow-unchecked;
+}
+
+.items-list {
+  @apply text-lg px-4 font-medium text-white flex-grow transition-all duration-200 ease-in-out;
+}
+
+.input-checkbox:checked + .items-list {
+  @apply text-yellow-400 font-bold scale-105 transition-transform duration-300 ease-in-out shadow-lg italic;
+}
+
+.empty {
+  @apply text-2xl py-8 font-semibold text-transparent bg-clip-text 
+    bg-gradient-to-r from-blue-500 to-purple-500 italic;
+}
+
+.radio-container {
+  @apply flex items-center space-x-6 mt-8;
+}
+
+.radio-label {
+  @apply text-lg font-semibold text-gray-700;
+}
+
+
