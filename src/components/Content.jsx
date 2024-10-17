@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Lists from './Lists';
+import Input from './Input';
 
 const Content = () => {
   const [items, setItems] = useState([]);
@@ -58,17 +59,11 @@ const Content = () => {
 
   return (
     <main className='bg-gradient-body flex-container'>
-      <div className='input-container'>
-        <input 
-          className='input-search'
-          type='text' 
-          placeholder='Enter The List'
-          required
-          value={newItem}
-          onChange={(e) => setNewItem(e.target.value)}
-        />
-        <button className='add-button' onClick={handleAdd}>ADD</button>
-      </div>
+      <Input 
+        handleAdd = {handleAdd}
+        newItem = {newItem}
+        setNewItem = {setNewItem}
+      />
       <ul className='list-container'>
         {items.length > 0 ? (
           items.map(item => (
