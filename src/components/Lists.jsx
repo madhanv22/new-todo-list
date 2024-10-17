@@ -1,22 +1,26 @@
 import React, { useContext } from 'react'
 import { UserContext } from './Content'
+import CheckBox from './CheckBox'
+import Delete from './Delete'
+import ItemText from './ItemText'
 
 const Lists = ({item}) => {
-  const { handleCheck, handleDelete} = useContext(UserContext)
+  const { handleCheck, handleDelete } = useContext(UserContext)
 
   return (
     <div>
       <li>
-        <input 
-          className='input-checkbox'
-          type="checkbox" 
+        <CheckBox
+          onChange={() => handleCheck(item.id)}
           checked={item.checked}
-          onChange={() => handleCheck(item.id)} 
         />
-        <span className='items-list' style={item.checked ? { textDecoration: 'line-through' } : {}}>
-          {item.items}
-        </span>
-        <button className='delete-button' onClick={() => handleDelete(item.id)}>x</button>
+        <ItemText 
+          text={item.items}
+          checked={item.checked}
+        />
+        <Delete 
+          onClick={() => handleDelete(item.id)}
+        />
       </li>
     </div>
   )

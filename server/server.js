@@ -8,8 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 let items = [
-  {id: 1, items: "clean house", checked: false},
-  {id: 2, items: "Buy a car", checked: false},
+  {},
 ];
 
 app.get('/api/items', (req, res) => {
