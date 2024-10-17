@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { UserContext } from './Content'
-import CheckBox from './CheckBox'
+import Checkbox from './Checkbox'
 import Delete from './Delete'
 import ItemText from './ItemText'
 
@@ -10,7 +10,7 @@ const Lists = ({item}) => {
   return (
     <div>
       <li>
-        <CheckBox
+        <Checkbox
           onChange={() => handleCheck(item.id)}
           checked={item.checked}
         />

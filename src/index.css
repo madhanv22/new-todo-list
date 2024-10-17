@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,41 +10,57 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
-  background-color: black; 
+@layer base {
+  body {
+    @apply font-sans bg-gray-900;
+  }
 }
 
 .input-container {
-  @apply flex items-center justify-center mt-16
+  @apply flex items-center justify-center mt-16;
 }
 
 .add-button {
   @apply bg-gradient-to-r from-green-700 to-green-500 px-3 py-4 text-white rounded-full
-    hover:bg-green-600 font-bold shadow-lg transition-all duration-200 ease-in-out
-}
-
-.input-search {
-  @apply p-3 border-2 border-gray-400 mx-3 rounded-lg shadow-sm w-full max-w-md
-   focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200
-}
-
-.list-container li {
-  @apply flex items-center w-full max-w-md m-2 py-4 px-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 ease-in-out justify-between;
-}
-
-.input-checkbox {
-  @apply h-6 w-6 border-2 accent-green-700 rounded-lg cursor-pointer transition-all duration-200 
-    focus:ring-2 focus:ring-green-500;
-}
-
-.items-list {
-  @apply text-lg px-4 font-medium text-gray-800 flex-grow;
+    hover:from-purple-500 hover:to-pink-500 hover:text-blue-300 font-bold shadow-lg 
+    transition-all duration-200 ease-in-out transform-gpu hover:scale-105;
 }
 
 .delete-button {
   @apply bg-red-600 font-semibold text-white px-4 py-2 rounded-full 
-    hover:bg-red-400 shadow-md transition-all duration-300 ease-in-out;
+    hover:bg-custom-green hover:text-pink-600 shadow-md transition-all duration-300 ease-in-out
+    transform-gpu hover:rotate-12 hover:scale-110;
+}
+
+.input-search {
+  @apply p-3 border-2 border-gray-400 mx-3 rounded-lg shadow-sm w-full max-w-md
+   focus:ring-2 focus:ring-checked focus:border-transparent transition-all duration-200;
+}
+
+.list-container li {
+  @apply flex items-center w-full max-w-md m-2 py-4 px-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg shadow-md hover:shadow-lg 
+    transition-all duration-200 ease-in-out justify-between;
+}
+
+.input-checkbox {
+  @apply h-6 w-6 border-2 rounded-lg cursor-pointer transition-all duration-300 ease-in-out
+    focus:ring-2 focus:ring-checked;
+}
+
+.input-checkbox:checked {
+  @apply bg-checked shadow-checked scale-checked; 
+}
+
+.input-checkbox:not(:checked) {
+  @apply bg-unchecked shadow-unchecked;
+}
+
+.items-list {
+  @apply text-lg px-4 font-medium text-white flex-grow transition-all duration-200 ease-in-out;
+}
+
+.input-checkbox:checked + .items-list {
+  @apply text-yellow-400 font-bold scale-105 transition-transform duration-300 ease-in-out shadow-lg italic;
 }
 
 .empty {
@@ -51,9 +69,9 @@ body {
 }
 
 .header {
-  @apply text-center text-4xl font-extrabold text-white 
-  bg-gradient-to-r from-purple-600 to-pink-600 shadow-xl p-6 rounded-full 
-  w-full max-w-3xl mx-auto mt-6 mb-4 bg-opacity-80;
+  @apply text-center text-5xl font-bold text-white 
+  bg-gradient-to-r from-purple-500 to-pink-500 shadow-2xl p-8 rounded-lg 
+  w-full mx-auto mt-8 mb-6 bg-opacity-90;
 }
 
 .radio-container {
@@ -61,7 +79,7 @@ body {
 }
 
 .radio-label {
-  @apply text-lg font-semibold text-gray-700
+  @apply text-lg font-semibold text-gray-700;
 }
 
 .bg-gradient-body {
@@ -69,7 +87,7 @@ body {
 }
 
 .flex-container {
-  @apply flex flex-col items-center
+  @apply flex flex-col items-center;
 }
 
 .how-to-use {
@@ -87,4 +105,3 @@ body {
 .how-to-use li {
   @apply mb-2 bg-gradient-to-r from-purple-200 to-pink-200 p-2 rounded-md shadow-sm;
 }
-

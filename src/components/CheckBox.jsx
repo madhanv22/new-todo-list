@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CheckBox = ({checked, onChange}) => {
+const Checkbox = ({checked, onChange}) => {
   return (
     <input 
       className='input-checkbox'
@@ -11,4 +11,4 @@ const CheckBox = ({checked, onChange}) => {
   )
 }
 
-export default CheckBox
+export default Checkbox

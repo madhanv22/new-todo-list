@@ -1,7 +1,6 @@
 import React, { useEffect, useState, createContext } from 'react';
 import axios from 'axios';
 import Input from './Input';
-import Guide from './Guide';
 import Licontainer from './Licontainer';
 
 export const UserContext = createContext();
@@ -77,7 +76,6 @@ const Content = () => {
       </UserContext.Provider>
       
       {/* Guidence component */}
-      <Guide />
     </main>
   );
 };
