@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Lists from './Lists';
 
 const Content = () => {
   const [items, setItems] = useState([]);
@@ -71,18 +72,11 @@ const Content = () => {
       <ul className='list-container'>
         {items.length > 0 ? (
           items.map(item => (
-            <li key={item.id}>
-              <input 
-                className='input-checkbox'
-                type="checkbox" 
-                checked={item.checked}
-                onChange={() => handleCheck(item.id)} 
-              />
-              <span className='items-list' style={item.checked ? { textDecoration: 'line-through' } : {}}>
-                {item.items}
-              </span>
-              <button className='delete-button' onClick={() => handleDelete(item.id)}>x</button>
-            </li>
+            <Lists
+              handleCheck = {handleCheck}
+              handleDelete = {handleDelete}
+              item={item}
+            />
           ))
         ) : (
           <p className='empty'>Your List Is Empty</p>
