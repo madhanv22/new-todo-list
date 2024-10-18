@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css';
 import './header.css';
-import './css/guide.css';
+import './guide.css';
 import './css/main.css';
 import './css/input.css';
 import './css/items.css';
