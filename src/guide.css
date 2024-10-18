@@ -1,6 +1,6 @@
 
 .how-to-use {
-  @apply mt-6 p-4 w-full bg-opacity-0 shadow-xl;
+  @apply mt-6 p-4 w-full bg-red-400 shadow-xl;
 }
 
 .how-to-use h2 {
