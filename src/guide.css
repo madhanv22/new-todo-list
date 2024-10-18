@@ -1,6 +1,7 @@
 
 .how-to-use {
   @apply mt-6 p-4 w-full bg-red-400 shadow-xl;
+  @apply bg-guide-todo bg-contain bg-center;
 }
 
 .how-to-use h2 {
@@ -9,6 +10,7 @@
 
 .how-to-use ol {
   @apply list-decimal list-inside text-black  p-4;
+  @apply bg-guide-todo2 bg-contain bg-center;
 }
 
 .how-to-use li {

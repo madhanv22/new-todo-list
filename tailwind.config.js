@@ -8,6 +8,22 @@ export default {
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],
       },
+      backgroundImage: {
+        'custom-bg': "url('./assets/bgimage.jpg')", 
+        'guide-todo': "url('./assets/guide.jpg')",
+        'guide-todo2': "url('./assets/guide2.jpg')"
+      },
+      backgroundSize: {
+        'contain': 'contain', 
+        'cover': 'cover',    
+      },
+      backgroundPosition: {
+        'center': 'center', 
+        'top': 'top',         
+        'bottom': 'bottom',
+        'left': 'left',
+        'right': 'right',
+      },
       transitionProperty: {
         'height': 'height',
         'spacing': 'margin, padding',
@@ -40,5 +56,5 @@ export default {
       },
     },
   },
-  plugins: [ ],
+  plugins: [],
 }

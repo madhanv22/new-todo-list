@@ -1,8 +1,5 @@
 .header {
-  @apply text-center text-5xl font-bold text-black
-  bg-gradient-to-r shadow-2xl p-8 
+  @apply text-center text-5xl font-bold text-black  shadow-2xl p-8 
   w-full mx-auto mb-6 bg-opacity-90 italic;
-  background-image: url('./assets/header.jpg');
-  background-size: contain; 
-  background-position: center;
+  @apply bg-guide-todo2 bg-contain bg-center;
 }

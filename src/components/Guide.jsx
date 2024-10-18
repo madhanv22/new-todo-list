@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Guide = () => {
+
   return (
     <div className="how-to-use">
       <h2>How to Use the To-Do App</h2>
