@@ -7,7 +7,6 @@ const Input = ({handleAdd, newItem, setNewItem}) => {
         className='input-search'
         type='text' 
         placeholder='Enter The List'
-        required
         value={newItem}
         onChange={(e) => setNewItem(e.target.value)}
       />

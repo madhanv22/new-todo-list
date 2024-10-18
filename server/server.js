@@ -7,9 +7,7 @@ const  port = 5000;
 app.use(cors());
 app.use(express.json());
 
-let items = [
-  {},
-];
+let items = [];
 
 app.get('/api/items', (req, res) => {
   res.json(items);
