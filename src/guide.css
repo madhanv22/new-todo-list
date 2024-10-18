@@ -1,14 +1,14 @@
 
 .how-to-use {
-  @apply mt-6 p-4 rounded-lg bg-white bg-opacity-80 shadow-xl;
+  @apply mt-6 p-4 w-full bg-opacity-0 shadow-xl;
 }
 
 .how-to-use h2 {
-  @apply text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 mb-2;
+  @apply text-xl px-2 font-semibold text-transparent bg-clip-text text-black bg-gradient-to-tr from-purple-600 to-pink-500 mb-2;
 }
 
 .how-to-use ol {
-  @apply list-decimal list-inside text-gray-700 bg-gradient-to-r from-blue-300 to-blue-500 rounded-lg p-4;
+  @apply list-decimal list-inside text-black  p-4;
 }
 
 .how-to-use li {

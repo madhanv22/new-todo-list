@@ -13,6 +13,9 @@
 @layer base {
   body {
     @apply font-sans bg-gray-900;
+    background-image: url('./assets/bgimage.jpg');
+    background-size: contain; 
+    background-position: center;
   }
 }
 

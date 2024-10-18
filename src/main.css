@@ -4,5 +4,6 @@
 }
 
 .bg-gradient-body {
-  @apply bg-gradient-to-b from-gray-800 via-gray-600 to-gray-800;
+  
 }
+
